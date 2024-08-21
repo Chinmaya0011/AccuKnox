@@ -1,0 +1,74 @@
+.navbar {
+  font-family: sans-serif;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: #f5f5f5;
+
+}
+
+.header h1 {
+  font-size: 24px;
+  color: #333;
+}
+
+.search {
+  position: relative;
+  margin: 0 20px;
+  width: 300px;
+}
+
+.searchIcon {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  color: #888;
+}
+
+.searchInput {
+  height: 30px;
+  width: 100%;
+  padding: 5px 10px 5px 30px;
+  font-size: 20px;
+  border: 1px solid #ccc;
+  border-radius: 20px; /* Rounded corners for the input */
+}
+
+.actions {
+  display: flex;
+  gap: 15px;
+}
+
+.addButton, .refreshButton, .timeButton {
+  padding: 8px 16px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 8px; /* Rounded corners for buttons */
+  border: 2px solid #007bff; /* Blue border */
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s, transform 0.2s;
+}
+
+/* White background with blue text */
+.addButton, .refreshButton, .timeButton {
+  background-color: white;
+  color: #007bff;
+}
+
+/* Hover state: Blue background with white text */
+.addButton:hover, .refreshButton:hover, .timeButton:hover {
+  background-color: #007bff;
+  color: white;
+  transform: translateY(-2px); /* Slight lift on hover */
+}
+
+.timeSelect {
+  margin-left: 8px;
+  padding: 5px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  background-color: white;
+  font-size: 14px;
+}
