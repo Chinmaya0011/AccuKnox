@@ -1,8 +1,28 @@
-import React from 'react';
-import { FaPlus, FaSync, FaClock, FaSearch } from 'react-icons/fa'; // Import the search icon
+import React, { useState } from 'react';
+import { FaPlus, FaSync, FaClock, FaSearch } from 'react-icons/fa';
+import { useDispatch } from 'react-redux';
 import style from '../assets/styles/Navbar.module.css';
+import { setCategories } from '../features/dashboard/dashboardSlice';
 
-const Navbar = () => {
+const Navbar = ({ categories }) => {
+  const [searchQuery, setSearchQuery] = useState('');
+  const dispatch = useDispatch();
+
+  const handleSearchChange = (e) => {
+    const query = e.target.value.toLowerCase();
+    setSearchQuery(query);
+
+ 
+    const filteredCategories = categories.map(category => ({
+      ...category,
+      widgets: category.widgets.filter(widget =>
+        widget.name.toLowerCase().includes(query)
+      )
+    })).filter(category => category.widgets.length > 0);
+
+    dispatch(setCategories(filteredCategories));
+  };
+
   return (
     <div className={style.navbar}>
       <div className={style.header}>
@@ -14,6 +34,8 @@ const Navbar = () => {
           type="text" 
           placeholder="Search Anything..." 
           className={style.searchInput}
+          value={searchQuery}
+          onChange={handleSearchChange} 
         />
       </div>
       <div className={style.actions}>

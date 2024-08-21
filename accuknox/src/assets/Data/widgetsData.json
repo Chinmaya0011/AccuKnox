@@ -1,0 +1,45 @@
+[
+  {
+    "id": 1,
+    "category": "CSPM Executive Dashboard",
+    "widgets": [
+      {
+        "id": 1,
+        "name": "Cloud Account",
+        "text": "Connected 2"
+      },
+      {
+        "id": 2,
+        "name": "Cloud Account Risk",
+        "text": "9659"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "category": "CWPP Dashboard",
+    "widgets": [
+      {
+        "id": 3,
+        "name": "Widget 3",
+        "text": "Connected.."
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "category": "Registry Scan",
+    "widgets": [
+      {
+        "id": 4,
+        "name": "img risk",
+        "text": "This is widget 3"
+      },
+      {
+        "id": 5,
+        "name": "img risk",
+        "text": "This is widget 3"
+      }
+    ]
+  }
+]
